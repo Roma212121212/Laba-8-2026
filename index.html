@@ -4,6 +4,45 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Головна</title>
+  <style>
+    body {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+      font-family: system-ui, "Segoe UI", Roboto, Arial, sans-serif;
+      line-height: 1.7;
+      color: #1a1d24;
+      background: #ffffff;
+    }
+    nav {
+      padding-bottom: 1rem;
+      border-bottom: 1px solid #e3e7ee;
+      color: #9aa3b2;
+    }
+    nav a, p a { color: #1d4ed8; text-decoration: none; }
+    nav a:hover, p a:hover { text-decoration: underline; }
+    h1 { margin: 2rem 0 1rem; font-size: 2.4rem; }
+    h2 { margin: 2.2rem 0 .6rem; font-size: 1.25rem; color: #1d4ed8; }
+    h3 { margin: 1.6rem 0 .4rem; font-size: 1.05rem; }
+    ul { padding-left: 1.2rem; }
+    li { margin-bottom: .3rem; }
+
+    img { display: block; max-width: 100%; height: auto; border-radius: 6px; }
+    figure { margin: 1.2rem 0; }
+    figcaption { margin-top: .4rem; font-size: .9rem; color: #5b6577; }
+    .cover { width: 100%; max-width: 360px; }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: .75rem;
+    }
+    .gallery figure { margin: 0; }
+    .gallery img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; object-position: center top; }
+
+    @media (max-width: 420px) {
+      .gallery { grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
 <body>
   <nav>
@@ -12,7 +51,7 @@
     <a href="team.html">Команда</a>
   </nav>
 
-  <h1>Привіт Git</h1>
+  <h1>Привіт, Git</h1>
 
   <h2>Інформація про автора</h2>
   <ul>
@@ -26,8 +65,38 @@
   <h2>Про себе</h2>
   <p>
     Мене звати Роман Немчицький, мені 19 років. Я навчаюсь за спеціальністю «Комп'ютерна інженерія».
-    Люблю займатися творчими речами, фотографувати та слухати музику.
-    Ця сторінка створена в межах лабораторної роботи №8 з вивчення Git і GitHub Pages.
   </p>
+
+  <h2>Захоплення</h2>
+  <ul>
+    <li><strong>Фотографія:</strong> люблю фотографувати.</li>
+    <li><strong>Музика:</strong> люблю слухати музику.</li>
+    <li><strong>Творчість:</strong> люблю займатися творчими речами та пробувати нове.</li>
+  </ul>
+
+  <h3>Музика</h3>
+  <p>
+    З самого дитинства я люблю слухати музику. Мені завжди було цікаво, як вона пишеться й робиться, а також дивитися на цікавих і творчих людей. У 2019 році я вперше спробував програму FL Studio, але нічого путнього не виходило. Проте вже за рік я вирішив у ній розібратися. Сам процес написання музики приносить задоволення, а найцікавіше — це нові знайомства.
+  </p>
+  <p>
+    У 2022 році я познайомився з хлопцем, який також пише музику (біти), і відтоді ми спілкуємося: він підтримує мене, а я його. Влітку 2025 року він спродюсував трек для артиста Adamn Killa. Adamn Killa виконав його на On The Radar Freestyle, а згодом випустив кліп на цю композицію («Narcissist»).
+  </p>
+
+  <figure>
+    <img class="cover" src="on-the-radar.png" alt="Обкладинка On The Radar Freestyle" loading="lazy">
+    <figcaption>On The Radar Freestyle</figcaption>
+  </figure>
+
+  <p>
+    У 2024 році я познайомився з канадським продюсером DT Beats, який дуже мене мотивував і не раз кидав мені респект :) (я це дуже ціную). Також у 2024 році я познайомився з канадським репером <a href="https://www.youtube.com/@JBish">J Bish</a>: на стрімі в DT Beats я скинув на оцінку біт, і J Bish одразу зайшов на нього з фристайлом. Це був мій перший спродюсований трек. Відео з цим фристайлом у TikTok набрало понад 20 тисяч переглядів, і відтоді ми з J Bish продовжуємо спілкуватися. У 2025 році я познайомився з іншими продюсерами, які мають зв'язки принаймні з Lil Uzi Vert, а саме з його другом blonkoh. Blonkoh надсилав Lil Uzi Vert наші біти, і я сподіваюся, що він хоча б їх послухав. На більше я не розраховую :)
+  </p>
+
+  <h3>Фото</h3>
+  <div class="gallery">
+    <figure><img src="photo1.png" alt="Фото 1" loading="lazy"></figure>
+    <figure><img src="photo2.jpg" alt="Фото 2" loading="lazy"></figure>
+    <figure><img src="photo3.png" alt="Фото 3" loading="lazy"></figure>
+    <figure><img src="photo4.jpg" alt="Фото 4" loading="lazy"></figure>
+  </div>
 </body>
 </html>
