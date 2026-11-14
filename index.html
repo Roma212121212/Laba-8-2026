@@ -30,9 +30,11 @@
     img { display: block; max-width: 100%; height: auto; border-radius: 6px; }
     figure { margin: 1.2rem 0; }
     figcaption { margin-top: .4rem; font-size: .9rem; color: #5b6577; }
-    .cover { width: 100%; max-width: 360px; margin: 0 auto;  }
+
+    .cover { width: 100%; max-width: 360px; margin: 0 auto; }
     .cover-figure figcaption { text-align: center; }
-.gallery {
+
+    .gallery {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: .75rem;
@@ -40,8 +42,20 @@
     .gallery figure { margin: 0; }
     .gallery img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; object-position: center top; }
 
+    .my-gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: .75rem;
+      margin-top: 1.5rem;
+    }
+    .my-gallery figure { margin: 0; }
+    .my-gallery img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; }
+    .my-gallery figure:first-child { grid-column: 1 / -1; }
+    .my-gallery figure:first-child img { aspect-ratio: 16 / 9; }
+
     @media (max-width: 420px) {
       .gallery { grid-template-columns: 1fr; }
+      .my-gallery { grid-template-columns: 1fr 1fr; }
     }
   </style>
 </head>
@@ -83,10 +97,10 @@
     У 2022 році я познайомився з хлопцем, який також пише музику (біти), і відтоді ми спілкуємося: він підтримує мене, а я його. Влітку 2025 року він спродюсував трек для артиста Adamn Killa. Adamn Killa виконав його на On The Radar Freestyle, а згодом випустив кліп на цю композицію («Narcissist»).
   </p>
 
- <figure class="cover-figure">
-  <img class="cover" src="on-the-radar.png" alt="Обкладинка On The Radar Freestyle" loading="lazy">
-  <figcaption>On The Radar Freestyle</figcaption>
-</figure>
+  <figure class="cover-figure">
+    <img class="cover" src="on-the-radar.png" alt="Обкладинка On The Radar Freestyle" loading="lazy">
+    <figcaption>On The Radar Freestyle</figcaption>
+  </figure>
 
   <p>
     У 2024 році я познайомився з канадським продюсером DT Beats, який дуже мене мотивував і не раз кидав мені респект :) (я це дуже ціную). Також у 2024 році я познайомився з канадським репером <a href="https://www.youtube.com/@JBish">J Bish</a>: на стрімі в DT Beats я скинув на оцінку біт, і J Bish одразу зайшов на нього з фристайлом. Це був мій перший спродюсований трек. Відео з цим фристайлом у TikTok набрало понад 20 тисяч переглядів, і відтоді ми з J Bish продовжуємо спілкуватися. У 2025 році я познайомився з іншими продюсерами, які мають зв'язки принаймні з Lil Uzi Vert, а саме з його другом blonkoh. Blonkoh надсилав Lil Uzi Vert наші біти, і я сподіваюся, що він хоча б їх послухав. На більше я не розраховую :)
@@ -131,5 +145,15 @@
   <p>
     Мені приємно, що незнайомі люди кидають респект за фото, і я це дуже ціную. Також я дуже ціную тих, кому справді сподобалися мої фото, хто надихався моїми знімками й навіть вчився фотографувати :) Це все дуже коротко, але на сьогоднішній момент моя сестра, яка займалася фотографією, вже подорослішала й цим не займається, і вона, напевно, навіть гадки не має, що в мене теж є фотоапарат :(
   </p>
+
+  <div class="my-gallery">
+    <figure><img src="my1.jpg" alt="Моє фото 1" loading="lazy"></figure>
+    <figure><img src="my2.jpg" alt="Моє фото 2" loading="lazy"></figure>
+    <figure><img src="my3.jpg" alt="Моє фото 3" loading="lazy"></figure>
+    <figure><img src="my4.jpg" alt="Моє фото 4" loading="lazy"></figure>
+    <figure><img src="my5.jpg" alt="Моє фото 5" loading="lazy"></figure>
+    <figure><img src="my6.jpg" alt="Моє фото 6" loading="lazy"></figure>
+    <figure><img src="my7.jpg" alt="Моє фото 7" loading="lazy"></figure>
+  </div>
 </body>
 </html>
